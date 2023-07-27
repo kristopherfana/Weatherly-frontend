@@ -1,0 +1,13 @@
+.navbar-nav {
+  background-color: rgba(black, 0.3);
+  border-radius: 1.5rem;
+  .nav-link {
+    padding-inline: 2.5rem;
+    border-radius: 1.5rem;
+    font-weight: 500;
+  }
+  .active {
+    background-color: darken(rgba(black, 0.3), 90%);
+    font-weight: 600;
+  }
+}

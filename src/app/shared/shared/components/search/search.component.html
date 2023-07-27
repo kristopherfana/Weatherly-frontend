@@ -1,0 +1,30 @@
+<div>
+  <form class="d-flex" (keydown.enter)="$event.preventDefault()">
+    <div class="input-group">
+      <!-- <span class="input-group-text" id="basic-addon1">
+        <button type="button">@</button>
+      </span> -->
+      <input
+        type="text"
+        name="city"
+        id="city"
+        class="form-control"
+        placeholder="Search city"
+        aria-describedby="helpId"
+        [formControl]="searchControl"
+        spellcheck="false"
+      />
+    </div>
+  </form>
+  <div class="list-group list-group-flush" *ngIf="results.length > 0">
+    <button
+      type="button"
+      class="list-group-item list-group-item-action"
+      *ngFor="let result of results"
+      (click)="select(result)"
+      tabindex="0"
+    >
+      {{ result.name }}, {{ result.state }}, {{ result.country }}
+    </button>
+  </div>
+</div>
