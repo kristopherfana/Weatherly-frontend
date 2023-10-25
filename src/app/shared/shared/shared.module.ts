@@ -10,12 +10,12 @@ import { CommonModule } from '@angular/common';
   declarations: [
     HeaderComponent,
     NavComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     ReactiveFormsModule,
     CommonModule
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, NavComponent]
 })
 export class SharedModule { }

@@ -49,13 +49,18 @@ img {
     display: flex;
     align-items: flex-end;
   }
+  canvas {
+    position: fixed;
+    z-index: 2;
+  }
 }
 
 .daily-forecast {
-  min-height: 735px;
+  max-height: 695px;
+  overflow: hidden;
 }
 .hourly-forecast {
-  min-height: 200px;
+  min-height: 160px;
 }
 
 @keyframes fadeIn {

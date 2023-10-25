@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HourlyForecastComponent } from './hourly-forecast.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -7,6 +8,7 @@ import { HourlyForecastComponent } from './hourly-forecast.component';
   declarations: [
     HourlyForecastComponent
   ],
+  imports: [CommonModule],
   exports: [HourlyForecastComponent]
 })
 export class HourlyForecastModule { }

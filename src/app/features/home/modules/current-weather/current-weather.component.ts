@@ -4,7 +4,7 @@ import { Location } from 'src/app/shared/shared/models/location/location.model';
 import { LocationService } from 'src/app/shared/shared/services/location/location.service';
 import { CurrentWeatherService } from './services/current-weather.service';
 import { Observable, Subscription } from 'rxjs';
-import { CurrentWeatherData, CurrentWeatherModel, BackgroundImg } from './models/current-weather.model';
+import { CurrentWeatherData } from './models/current-weather.model';
 
 @Component({
   selector: 'app-current-weather',

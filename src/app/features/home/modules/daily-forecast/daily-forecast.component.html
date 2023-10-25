@@ -1,16 +1,43 @@
-<div class="card-body">
+<div class="card-body" *ngIf="DailyForecastList.length">
   <div class="tomorrow-forecast">
     <div class="row mb-4 justify-content-center">
-      <p class="col-7">Tomorrow ,<span class="light">18 July</span></p>
-      <p class="col-4 text-end light d-inline">09:00AM</p>
+      <p class="col-7">{{ DailyForecastList[0].date }}</p>
+      <p class="col-4 text-end light d-inline">
+        {{ DailyForecastList[0].time }}
+      </p>
     </div>
+
     <div class="row mb-4">
-      <p class="col text-end small light">Min:15°</p>
-      <p class="col text-center display-2">18°</p>
-      <p class="col text-start small light">Max:15°</p>
+      <p class="col text-end small light">
+        Min: {{ DailyForecastList[0].temp.max }}°
+      </p>
+      <p class="col text-center display-2">
+        {{ DailyForecastList[0].temp.day }}°
+      </p>
+      <p class="col text-start small light">
+        Max: {{ DailyForecastList[0].temp.max }}°
+      </p>
     </div>
     <div class="row">
-      <p class="text-center">Light drizzle, gentle breeze.</p>
+      <p class="text-center">
+        {{ DailyForecastList[0].weather[0].description | titlecase }}
+      </p>
+    </div>
+  </div>
+  <div class="daily-forecast">
+    <div class="row">
+      <ul class="list-group">
+        <li
+          class="list-group-item row"
+          *ngFor="let DailyForecast of DailyForecastList"
+        >
+          <p class="col-4">{{ DailyForecast.date }}</p>
+          <p class="col-5">
+            {{ DailyForecast.weather[0].description | titlecase }}
+          </p>
+          <p class="col-3">{{ DailyForecast.temp.day }}°</p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
